@@ -8,7 +8,11 @@
 
 function continueAlphabet() {
   const randomAlphabet = getRandomAlphabet();
-  console.log(randomAlphabet);
+
+  const screenValue = document.getElementById("screen-value");
+  screenValue.innerText = randomAlphabet;
+
+  setBackgroundColorById(randomAlphabet);
 }
 function play() {
   homeScreen("home");
