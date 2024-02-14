@@ -8,6 +8,10 @@ function playGroundScreen(getElementId) {
   element.classList.remove("hidden");
 }
 
+function removeBackgroundColorById(getElementById){
+    const element = document.getElementById(getElementById);
+    element.classList.remove("bg-orange-600")
+}
 function setBackgroundColorById(getElementId) {
   const element = document.getElementById(getElementId);
   console.log(element);
