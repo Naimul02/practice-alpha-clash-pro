@@ -6,7 +6,12 @@
 //   playGroundId.classList.remove("hidden");
 // }
 
+function continueAlphabet() {
+  const randomAlphabet = getRandomAlphabet();
+  console.log(randomAlphabet);
+}
 function play() {
   homeScreen("home");
   playGroundScreen("play-ground");
+  continueAlphabet();
 }
