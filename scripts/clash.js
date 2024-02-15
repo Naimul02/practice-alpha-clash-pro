@@ -16,10 +16,29 @@ function handleKeyboardButtonPress(event) {
   console.log(playerPressKey, shouldValue);
 
   if (playerPressKey === shouldValue) {
+    // -----------------------------------------------------
+    // const scoreElement = document.getElementById("score");
+    // const scoreString = scoreElement.innerText;
+    // const score = parseInt(scoreString);
+    // ------------------------------------------------------
+
+    const scoreValue = getTextElementValueById("score");
+
+    const setValue = scoreValue + 1;
+    setTextElementValueById("score", setValue);
+
     removeBackgroundColorById(shouldValue);
     continueAlphabet();
   } else {
-    console.log("you lose the game");
+    const lifeValue = getTextElementValueById("life");
+    const setValue = lifeValue - 1;
+    setTextElementValueById("life", setValue);
+
+    // const lifeElement = document.getElementById("life");
+    // const lifeString = lifeElement.innerText;
+    // const life = parseInt(lifeString);
+    // const updateLife = life - 1;
+    lifeElement.innerText = updateLife;
   }
 }
 

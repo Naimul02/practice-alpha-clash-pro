@@ -8,13 +8,25 @@ function playGroundScreen(getElementId) {
   element.classList.remove("hidden");
 }
 
-function removeBackgroundColorById(getElementById){
-    const element = document.getElementById(getElementById);
-    element.classList.remove("bg-orange-600")
+function getTextElementValueById(elementId) {
+  const element = document.getElementById(elementId);
+  const textValue = element.innerText;
+  const value = parseInt(textValue);
+  return value;
+}
+function setTextElementValueById(elementId, value) {
+  const element = document.getElementById(elementId);
+  element.innerText = value;
+}
+
+
+function removeBackgroundColorById(getElementById) {
+  const element = document.getElementById(getElementById);
+  element.classList.remove("bg-orange-600");
 }
 function setBackgroundColorById(getElementId) {
   const element = document.getElementById(getElementId);
-  console.log(element);
+  // console.log(element);
   element.classList.add("bg-orange-600");
 }
 function getRandomAlphabet() {
